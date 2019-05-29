@@ -1,10 +1,7 @@
-// ===============================================================================
 // LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
+// Link our rates to our data array located on friends.js
 
-const friendsData = require("../data/friends");
+const playersData = require("../data/friends");
 
 
 // ===============================================================================
@@ -12,29 +9,55 @@ const friendsData = require("../data/friends");
 // ===============================================================================
 
 module.exports = function (app) {
-    // API GET Requests
-    // Below code handles when users "visit" a page.
-    // In each of the below cases when a user visits a link
-    // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-    // ---------------------------------------------------------------------------
+    // API GET Request.  Gets the data array located on friends.js
 
     app.get("/api/friends", function (req, res) {
-        res.json(friendsData);
+        res.json(playersData);
     });
 
-    // API POST Requests
-    // Below code handles when a user submits a form and thus submits data to the server.
-    // In each of the below cases, when a user submits form data (a JSON object)
-    // ...the JSON is pushed to the appropriate JavaScript array
-    // (ex. User fills out a reservation request... this data is then sent to the server...
-    // Then the server saves the data to the tableData array)
+    // API POST Requests- Posts the 
+    // Then the server saves the data to data array on friends.js after a new player
+    // submits their survey form.
     // ---------------------------------------------------------------------------
 
     app.post("/api/friends", function (req, res) {
-        // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        // It will do this by sending out the value "true" have a table
-        // req.body is available since we're using the body parsing middleware
-        friendsData.push(req.body);
-        res.json(true);
+
+        playersData.push(req.body);
+        res.json(matchMaker(req.body))
+        console.log("res.json:", matchMaker(req.body))
     })
 }
+
+//matchMaker function analyzes the compatibility of the newPlayer with each of the players
+//in the playersArray to determine the best match, and then returns the match into res.json().
+function matchMaker(newPlayer) {
+    // Here we then log the waitlistData to console, where it will show up as an object.
+    let matchDiff = 1000000;
+    let matchIndex = 0;
+
+    // Loop through the array of players
+    for (let i = 0; i < playersData.length; i++) {
+
+        let currentScores = playersData[i].scores;
+        console.log("currentScores:", currentScores)
+        let totalDifference = 0;
+
+        // Loop through the scores of each player and calculate the differences.  Add each differences to the totalDifference.
+        for (let x = 0; x < currentScores.length; x++) {
+            let difference = Math.abs(newPlayer.scores[x] - currentScores[x]);
+            totalDifference += difference;
+            console.log("Total Diff:", totalDifference)
+        }
+
+        if (totalDifference < matchDiff) {
+            matchDiff = totalDifference;
+            matchIndex = i;
+            console.log("Match Index:", matchIndex)
+        }
+
+        let matchPlayer = playersData[matchIndex];
+        console.log("matchPlayer:", matchPlayer)
+        return matchPlayer;
+    }
+}
+

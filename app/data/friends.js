@@ -3,10 +3,13 @@
 // Initially we just set it equal to a "dummy" customer.
 // But you could have it be an empty array as well.
 
-let friendsArray = [
+let playersArray = [
     {
-        "name": "Ahmed",
-        "photo": "friend1.png",
+        "name": "Mario",
+        "phone": "404.555.2345",
+        "email": "mario@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/mario.png",
         "scores": [
             "1",
             "2",
@@ -22,8 +25,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Vyjoo",
-        "photo": "friend2.jpg",
+        "name": "Luigi",
+        "phone": "404.555.2541",
+        "email": "luigi@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/luigi.png",
         "scores": [
             "5",
             "1",
@@ -38,8 +44,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Magesh",
-        "photo": "friend3.jpg",
+        "name": "Toad",
+        "phone": "404.555.TOAD",
+        "email": "toad@tennismatch.com",
+        "hand": "Left",
+        "pic": "../images/toad.png",
         "scores": [ 
             "2",
             "1",
@@ -54,8 +63,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Prakash",
-        "photo": "friend4.jpg",
+        "name": "Yoshi",
+        "phone": "404.555.5217",
+        "email": "yoshi@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/yoshi.png",
         "scores": [
             "3",
             "2",
@@ -70,8 +82,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Alisha",
-        "photo": "friend5.jpg",
+        "name": "Donkey Kong",
+        "phone": "404.555.3467",
+        "email": "donkeykong@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/donkey.png",
         "scores": [
             "5",
             "2",
@@ -86,8 +101,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Anika",
-        "photo": "friend6.jpg",
+        "name": "Diddy",
+        "phone": "404.555.5465",
+        "email": "diddy@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/diddy.png",
         "scores": [
             "5",
             "2",
@@ -102,8 +120,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Vaneet",
-        "photo": "friend7.jpg",
+        "name": "Shy Guy",
+        "phone": "404.555.2587",
+        "email": "shyguy@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/shyguy.png",
         "scores": [
             "1",
             "5",
@@ -118,8 +139,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Aanan",
-        "photo": "friend8.jpg",
+        "name": "Wario",
+        "phone": "404.555.6528",
+        "email": "wario@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/wario.png",
         "scores": [
             "4",
             "4",
@@ -134,8 +158,11 @@ let friendsArray = [
         ]
     },
     {
-        "name": "Ali",
-        "photo": "friend9.jpg",
+        "name": "Bowser",
+        "phone": "404.555.9871",
+        "email": "bowser@tennismatch.com",
+        "hand": "Right",
+        "pic": "../images/bowser.png",
         "scores": [
             "3",
             "2",
@@ -149,9 +176,32 @@ let friendsArray = [
             "3"
         ]
     },
+
     {
-        "name": "Anish",
-        "photo": "friend10.jpg",
+        "name": "Koopa Troopa",
+        "phone": "404.555.7812",
+        "email": "koopatroopa@tennismatch.com",
+        "hand": "Right",
+        "pic": "../koopa.png",
+        "scores": [
+            "2",
+            "1",
+            "4",
+            "3",
+            "3",
+            "2",
+            "4",
+            "4",
+            "1",
+            "3"
+        ]
+    },
+    {
+        "name": "Vyjoo",
+        "phone": "404.555.2461",
+        "email": "vyjoo@tennismatch.com",
+        "hand": "Right",
+        "pic": "/images/vyjoo.png",
         "scores": [
             "2",
             "1",
@@ -162,15 +212,11 @@ let friendsArray = [
             "2",
             "1",
             "1",
-            "1"
+            "5"
         ]
     }
 ]
 
-function findFriend () {
 
-
-
-}
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = friendsArray;
+module.exports = playersArray;
