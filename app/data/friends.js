@@ -9,7 +9,7 @@ let playersArray = [
         "phone": "404.555.2345",
         "email": "mario@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/mario.png",
+        "pic": "/images/mario.png",
         "scores": [
             "1",
             "2",
@@ -29,7 +29,7 @@ let playersArray = [
         "phone": "404.555.2541",
         "email": "luigi@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/luigi.png",
+        "pic": "/images/luigi.png",
         "scores": [
             "5",
             "1",
@@ -48,7 +48,7 @@ let playersArray = [
         "phone": "404.555.TOAD",
         "email": "toad@tennismatch.com",
         "hand": "Left",
-        "pic": "../images/toad.png",
+        "pic": "/images/toad.png",
         "scores": [ 
             "2",
             "1",
@@ -67,7 +67,7 @@ let playersArray = [
         "phone": "404.555.5217",
         "email": "yoshi@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/yoshi.png",
+        "pic": "/images/yoshi.png",
         "scores": [
             "3",
             "2",
@@ -86,7 +86,7 @@ let playersArray = [
         "phone": "404.555.3467",
         "email": "donkeykong@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/donkey.png",
+        "pic": "/images/donkey.png",
         "scores": [
             "5",
             "2",
@@ -105,7 +105,7 @@ let playersArray = [
         "phone": "404.555.5465",
         "email": "diddy@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/diddy.png",
+        "pic": "/images/diddy.png",
         "scores": [
             "5",
             "2",
@@ -124,7 +124,7 @@ let playersArray = [
         "phone": "404.555.2587",
         "email": "shyguy@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/shyguy.png",
+        "pic": "/images/shyguy.png",
         "scores": [
             "1",
             "5",
@@ -143,7 +143,7 @@ let playersArray = [
         "phone": "404.555.6528",
         "email": "wario@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/wario.png",
+        "pic": "/images/wario.png",
         "scores": [
             "4",
             "4",
@@ -162,7 +162,7 @@ let playersArray = [
         "phone": "404.555.9871",
         "email": "bowser@tennismatch.com",
         "hand": "Right",
-        "pic": "../images/bowser.png",
+        "pic": "/images/bowser.png",
         "scores": [
             "3",
             "2",
@@ -182,7 +182,7 @@ let playersArray = [
         "phone": "404.555.7812",
         "email": "koopatroopa@tennismatch.com",
         "hand": "Right",
-        "pic": "images/koopa.png",
+        "pic": "/images/koopa.png",
         "scores": [
             "2",
             "1",
