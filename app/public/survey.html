@@ -191,7 +191,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Best Match</h5>
+          <h1 class="modal-title">Best Match</h1>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -201,7 +201,7 @@
           <h2 id="match-phone"></h2>
           <h2 id="match-email"></h2>
           <h2 id="match-hand"></h2>
-          <img id="match-pic" src="" alt="">
+          <img id="match-pic" src="" alt="test">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" data-dismiss="modal">Close Match</button>
@@ -249,11 +249,11 @@
           console.log("Match Name:", matchPlayer.name)
           $("#match-name").text(matchPlayer.name);
           $("#match-phone").text(matchPlayer.phone);
-          $("match-hand").text(matchPlayer.hand, "Handed");
+          $("#match-hand").text(matchPlayer.hand + " Handed");
           $("#match-email").text(matchPlayer.email);
 
           console.log(matchPlayer.hand, "Handed")
-          $("#match-pic").attr("src", matchPlayer.pic);
+          $("#match-pic").attr("src", "/images/vyjoo.png");
           console.log("src:", matchPlayer.pic)
 
           // Show the modal with with info for the match
