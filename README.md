@@ -8,11 +8,7 @@ https://tennis-match-finder.herokuapp.com/
 
 ## About
 
-**Tennis Match Maker** is a **Node** and **Express** powered match making application deployed **Heroku** designed to help a tennis player find their perfect match!  A prospective player simply provides bio info and an assessment of their game and **Tennis Match Maker** does the rest!
-
-## How it Works
-
-### The "Servey"
+**Tennis Match Maker** is a **Node** and **Express** powered match making application deployed via **Heroku** designed to help a tennis player find their perfect match!  A prospective player simply provides bio info and an assessment of their game and **Tennis Match Maker** does the rest!
 
 
 # Take your best SHOT!
