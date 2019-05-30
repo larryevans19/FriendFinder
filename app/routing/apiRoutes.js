@@ -22,10 +22,11 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
 
-        matchMaker(req.body);
-        playersData.push(req.body);
+ 
+    
         res.json(matchMaker(req.body))
-        console.log("res.json:", matchMaker(req.body))
+        playersData.push(req.body);
+        // console.log("res.json:", matchMaker(req.body))
     })
 }
 
