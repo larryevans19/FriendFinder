@@ -4,7 +4,7 @@ https://dashboard.heroku.com/apps/tennis-match-finder
 
 https://tennis-match-finder.herokuapp.com/
 
-![](app/public/images.slamazon.png)
+![](app/public/images/logo.png)
 
 ## About
 
