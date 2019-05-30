@@ -11,13 +11,17 @@ const express = require("express");
 // ==============================================================================
 
 // Tells node that we are creating an "express" server
-var app = express();
-var PORT = process.env.PORT || 8080;
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//Use statc in order to serve static files from teh specified directory. 
+//This was necessary to get the match images to display.
+const public = require("path").join(__dirname,"app/public");
+app.use(express.static(public));
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.

@@ -182,7 +182,7 @@ let playersArray = [
         "phone": "404.555.7812",
         "email": "koopatroopa@tennismatch.com",
         "hand": "Right",
-        "pic": "../koopa.png",
+        "pic": "images/koopa.png",
         "scores": [
             "2",
             "1",
