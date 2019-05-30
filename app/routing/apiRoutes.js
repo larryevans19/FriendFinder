@@ -22,6 +22,7 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
 
+        matchMaker(req.body);
         playersData.push(req.body);
         res.json(matchMaker(req.body))
         console.log("res.json:", matchMaker(req.body))
@@ -54,10 +55,12 @@ function matchMaker(newPlayer) {
             matchIndex = i;
             console.log("Match Index:", matchIndex)
         }
-
-        let matchPlayer = playersData[matchIndex];
-        console.log("matchPlayer:", matchPlayer)
-        return matchPlayer;
     }
+
+    let matchPlayer = playersData[matchIndex];
+    console.log("matchPlayer:", matchPlayer)
+
+    return matchPlayer;
+
 }
 
