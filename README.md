@@ -12,9 +12,9 @@ A tennis player new to **TMM** will begin the experience by clicking the button 
 
 ![](app/public/images/survey.png)
 
-The Servey is broken up into 2 sections.  The first captures the player's bio and contatct info, while the second is a 10 question self-assessment of the player's game to help identify the best match from within the site's _API Player List_. 
+The Servey is broken up into 2 sections.  The first captures the player's bio and contatct info, while the second is a 10 question self-assessment of the player's game to help identify the best match from within the site's _API Players List_. 
 
-Once the survey has been completed, the player serves it up so that **TMM** can analyze the Servey input to identify the player's best match from the site's _API Player List_.
+Once the survey has been completed, the player serves it up so that **TMM** can analyze the Servey input to identify the player's best match from the site's _API Players List_.
 
 ![](app/public/images/serveyscreen.png)
 
@@ -22,7 +22,7 @@ Once the survey has been completed, the player serves it up so that **TMM** can 
 
 ![](app/public/images/matchmodal.png)
 
-The player is also added to the _API Player List_ so that future users can be matched to them if they are the perfect match!
+The player is also added to the _API Players List_ so that future users can be matched to them if they are the perfect match!
 
 It's that easy!
 
