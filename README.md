@@ -8,9 +8,17 @@
 
 ## How it Works
  
-A tennis player new to **TMM** will begin the experience by clicking the button on the site home screen to complete a "Servey", **TMM's** tennis centric survey which captures the player's bio info and then a 10 question self-assessment of the player's game to help identify the best match from within the site's "API Player List". 
-
+A tennis player new to **TMM** will begin the experience by clicking the button on the site home screen to complete a "Servey", **TMM's** tennis centric survey 
 ![](app/public/images/survey.png)
+
+The Servey is broken up into 2 sections.  The first captures the player's bio and contatct info, while the second is a 10 question self-assessment of the player's game to help identify the best match from within the site's "API Player List". 
+
+Once the survey has been completed, the player serves it up so that **TMM** can analyze the Servey input to identify the player's best match from the site's API Player List.
+
+**TMM** returns the best match in a modal that displays the matched player's name, contact information, the player's dominant hand and then a picture of the match so that the player can size them up!
+
+![](app/public/images/modalmatch.png)
+
 
 ## Give it a SHOT!
 
