@@ -21,6 +21,7 @@ Once the survey has been completed, the player serves it up so that **TMM** can 
 **TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!  
 
 ![](app/public/images/matchmodal.png)
+
 _Toad is tough but I think we can take him!_
 
 The player is also added to the _API Players List_ so that future users can be matched to them if they are the perfect match!
