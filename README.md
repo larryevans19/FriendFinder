@@ -18,7 +18,7 @@ Once the survey has been completed, the player serves it up so that **TMM** can 
 
 ![](app/public/images/serveyscreen.png)
 
-**TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!
+**TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!  Toad is tough but I think we can take him!
 
 ![](app/public/images/matchmodal.png)
 
