@@ -4,8 +4,11 @@
 
 ## About
 
-**Tennis Match Maker** is a **Node** and **Express** powered match making application deployed via **Heroku** designed to help a tennis player find their perfect match!  A prospective player simply provides bio info and an assessment of their game and **Tennis Match Maker** does the rest!
+**Tennis Match Maker** is a **Node** and **Express** powered full stack match making website deployed via **Heroku** designed to help a tennis player find their perfect match!  A prospective player simply provides bio info and an assessment of their game and **Tennis Match Maker** does the rest!
 
+## How it Works
+ 
+A tennis player new to **TMM** will begin the experience by clicking the button on the site home screen to complete a "Servey", **TMM's** tennis focused survey which captures the player's bio info and then a 10 question self-assessment of the player's game to help identify the best match from within the site's "API Player List". 
 
 ## Give it a SHOT!
 
