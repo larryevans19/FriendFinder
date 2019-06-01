@@ -16,6 +16,8 @@ The Servey is broken up into 2 sections.  The first captures the player's bio an
 
 Once the survey has been completed, the player serves it up so that **TMM** can analyze the Servey input to identify the player's best match from the site's API Player List.
 
+![](app/public/images/serveyscreen.png)
+
 **TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!
 
 ![](app/public/images/matchmodal.png)
