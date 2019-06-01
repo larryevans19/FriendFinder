@@ -20,6 +20,7 @@ Once the survey has been completed, the player serves it up so that **TMM** can 
 
 ![](app/public/images/matchmodal.png)
 
+It's that easy!
 
 ## Give it a SHOT!
 
