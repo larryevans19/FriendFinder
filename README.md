@@ -12,9 +12,9 @@ A tennis player new to **TMM** will begin the experience by clicking the button 
 
 ![](app/public/images/survey.png)
 
-The _Servey_ is broken up into 2 sections.  The first captures the player's bio and contact info, while the second is a 10 question self-assessment of the player's game to help identify the best match from within the site's _API Players List_. 
+The _Servey_ is broken up into 2 sections.  The first captures the player's bio and contact info, while the second is a 10 question self-assessment of the player's game. 
 
-Once the survey has been completed, the player serves it up so that **TMM** can analyze the input and identify the player's best match from the site's _API Players List_.
+Once the _Servey_ has been completed, the player serves it up so that **TMM** can analyze the input and identify the player's best match from the site's _API Players List_.
 
 ![](app/public/images/serveyscreen.png)
 
