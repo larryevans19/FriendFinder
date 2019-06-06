@@ -79,7 +79,6 @@
       color: green;
       text-align: center;
     }
-
   </style>
 </head>
 
@@ -268,6 +267,27 @@
 
   </div>
 
+  <!-- Modal for Input Validation-->
+
+  <div id="valid-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Valdiation Error</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="error-message">Please complete all input fields to ensure TMM can locate your best match!</h2>
+          <img id="error-pic" src="/images/favicon.png" width="100%" height="auto" alt="match">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close Window</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Modal for Match-->
 
   <div id="match-modal" class="modal" tabindex="-1" role="dialog">
@@ -301,55 +321,86 @@
     $("#submit").on("click", function (event) {
       event.preventDefault();
 
+      
 
-      let newPlayer = {
-        name: $("#name").val(),
-        phone: $("#phone").val(),
-        email: $("#email").val(),
-        hand: $("#hand").val(),
-        pic: $("#pic").val(),
-        scores: [
-          $("#Q1").val(),
-          $("#Q2").val(),
-          $("#Q3").val(),
-          $("#Q4").val(),
-          $("#Q5").val(),
-          $("#Q6").val(),
-          $("#Q7").val(),
-          $("#Q8").val(),
-          $("#Q9").val(),
-          $("#Q10").val()
-        ]
+      //INPUT Validation
+      function validSubmit() {
+        let textValid = true;
+        let choiceValid = true;
+
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            textValid = false;
+            console.log("textValid:",textValid);
+          }
+        });
+
+        $(".chosen-select").each(function () {
+          let choiceValid = true;
+          if ($(this).val() === "") {
+            choiceValid = false;
+            console.log("choiceValid:",choiceValid);
+          }
+        });
+
+        //If INPUTS are not valid (complete) fire the validation error modal
+        if (!textValid || !choiceValid) {
+          $("#valid-modal").modal();
+        }
+
+        //else the INPUTS are valid, we proceed with the submission.
+        else {
+
+          let newPlayer = {
+            name: $("#name").val(),
+            phone: $("#phone").val(),
+            email: $("#email").val(),
+            hand: $("#hand").val(),
+            pic: $("#pic").val(),
+            scores: [
+              $("#Q1").val(),
+              $("#Q2").val(),
+              $("#Q3").val(),
+              $("#Q4").val(),
+              $("#Q5").val(),
+              $("#Q6").val(),
+              $("#Q7").val(),
+              $("#Q8").val(),
+              $("#Q9").val(),
+              $("#Q10").val()
+            ]
+          };
+
+
+          // AJAX post the new player data to the Friends API.
+          $.post("/api/friends", newPlayer, function (matchPlayer) {
+
+            console.log("MODAL PAGE:", matchPlayer);
+
+            // JQuery the match info the modal body
+            console.log("Match Name:", matchPlayer.name)
+            $("#match-name").text(matchPlayer.name);
+            $("#match-phone").text(matchPlayer.phone);
+            $("#match-hand").text(matchPlayer.hand + " Handed");
+            $("#match-email").text(matchPlayer.email);
+
+            console.log(matchPlayer.hand, "Handed")
+            $("#match-pic").attr("src", matchPlayer.pic);
+            console.log("src:", matchPlayer.pic)
+
+            // Show the modal with with info for the match
+            $("#match-modal").modal();
+          });
+
+
+        };
+
+
       };
 
-
-      // AJAX post the new player data to the Friends API.
-      $.post("/api/friends", newPlayer, function (matchPlayer) {
-
-        console.log("MODAL PAGE:", matchPlayer);
-
-        // JQuery the match info the modal body
-        console.log("Match Name:", matchPlayer.name)
-        $("#match-name").text(matchPlayer.name);
-        $("#match-phone").text(matchPlayer.phone);
-        $("#match-hand").text(matchPlayer.hand + " Handed");
-        $("#match-email").text(matchPlayer.email);
-
-        console.log(matchPlayer.hand, "Handed")
-        $("#match-pic").attr("src", matchPlayer.pic);
-        console.log("src:", matchPlayer.pic)
-
-        // Show the modal with with info for the match
-        $("#match-modal").modal();
-
-      });
-
-
+      validSubmit();
 
     });
-
-
-
 
 
   </script>

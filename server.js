@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//Use statc in order to serve static files from teh specified directory. 
+//Use statc in order to serve static files from the specified directory. 
 //This was necessary to get the match images to display.
 const public = require("path").join(__dirname,"app/public");
 app.use(express.static(public));
