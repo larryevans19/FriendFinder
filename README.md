@@ -18,6 +18,10 @@ Once the _Servey_ has been completed, the player serves it up so that **TMM** ca
 
 ![](app/public/images/serveyscreen.png)
 
+**TMM** strives to locate the player's perfect match from the _API Players List_ so it is important that the player provide all of the requested information.  The _Servey_ page validates the player's input, and if the player has not entered a response for all of the inputs a validation error modal will be launched when the player attempts to submit their _Servey_.
+
+![](app/public/images/validation.png)
+
 **TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!  
 
 "_Toad looks tough but I think we can take him!_"
