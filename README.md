@@ -22,7 +22,7 @@ Once the _Servey_ has been completed, the player serves it up so that **TMM** ca
 
 ![](app/public/images/validation.png)
 
-**TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!  
+After a completed _Servey_ is submitted, **TMM** returns the best match in a modal that displays the matched player's name, contact information, dominant hand, and then a picture of the match so that the player can size them up!  
 
 "_Toad looks tough but I think we can take him!_"
 
